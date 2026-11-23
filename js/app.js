@@ -1,3 +1,65 @@
+// Keep navigation independent of errors in optional page features.
+(function () {
+    function initMobileNavigation() {
+        const menu = document.getElementById('mobileMenu');
+        const toggle = document.getElementById('mobileToggle');
+        const close = document.getElementById('closeMenu');
+        const overlay = document.getElementById('overlay');
+        if (!menu || !toggle || !close || !overlay) return;
+        const desktop = window.matchMedia('(min-width: 1025px)');
+        let previousOverflow = '';
+
+        function setOpen(open, restoreFocus) {
+            open = Boolean(open && !desktop.matches);
+            if (open && menu.hidden) previousOverflow = document.body.style.overflow;
+            menu.hidden = !open;
+            menu.classList.toggle('open', open);
+            menu.setAttribute('aria-hidden', String(!open));
+            toggle.setAttribute('aria-expanded', String(open));
+            const modal = document.getElementById('successModal');
+            overlay.classList.toggle('active', open || Boolean(modal && modal.classList.contains('active')));
+            document.body.style.overflow = open ? 'hidden' : previousOverflow;
+            if (open) close.focus({preventScroll: true});
+            else if (restoreFocus) toggle.focus({preventScroll: true});
+        }
+
+        // Click supports keyboard/mouse. Touchend also covers Android browsers
+        // that suppress the synthetic click after a small finger movement.
+        function activate(element, action) {
+            element.addEventListener('click', action);
+            element.addEventListener('touchend', function (event) {
+                if (event.changedTouches.length !== 1) return;
+                event.preventDefault();
+                action();
+            }, {passive: false});
+        }
+        activate(toggle, function () { setOpen(menu.hidden, false); });
+        activate(close, function () { setOpen(false, true); });
+        activate(overlay, function () {
+            const modal = document.getElementById('successModal');
+            if (modal) modal.classList.remove('active');
+            setOpen(false, false);
+        });
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () { setOpen(false, false); });
+        });
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && !menu.hidden) setOpen(false, true);
+        });
+        window.addEventListener('resize', function () {
+            if (desktop.matches) setOpen(false, false);
+        });
+        // Reset restored back/forward-cache UI, including its scroll lock.
+        window.addEventListener('pageshow', function () { setOpen(false, false); });
+        setOpen(false, false);
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileNavigation);
+    } else {
+        initMobileNavigation();
+    }
+}());
+
 /**
  * Lumière Restaurant - Main Interactive Script
  * Modern Vanilla JS (No heavy jQuery dependencies needed)
@@ -11,57 +73,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 60) {
-            navbar.classList.add('scrolled');
+            if (navbar) navbar.classList.add('scrolled');
         } else {
-            navbar.classList.remove('scrolled');
+            if (navbar) navbar.classList.remove('scrolled');
         }
 
         if (window.scrollY > 400) {
-            backToTop.classList.add('show');
+            if (backToTop) backToTop.classList.add('show');
         } else {
-            backToTop.classList.remove('show');
+            if (backToTop) backToTop.classList.remove('show');
         }
 
         updateActiveNavLink();
     });
 
     // 2. Back to Top Click
-    backToTop.addEventListener('click', () => {
+    if (backToTop) backToTop.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
 
-    // 3. Mobile Navigation Drawer
-    const mobileToggle = document.getElementById('mobileToggle');
-    const closeMenu = document.getElementById('closeMenu');
-    const mobileMenu = document.getElementById('mobileMenu');
+    // Drawer behavior is initialized independently, before other page features.
     const overlay = document.getElementById('overlay');
-    const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-contact-box a');
-
-    function openMobileMenu() {
-        mobileMenu.classList.add('open');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeMobileMenu() {
-        mobileMenu.classList.remove('open');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    if (mobileToggle) mobileToggle.addEventListener('click', openMobileMenu);
-    if (closeMenu) closeMenu.addEventListener('click', closeMobileMenu);
-    if (overlay) overlay.addEventListener('click', () => {
-        closeMobileMenu();
-        closeModalWindow();
-    });
-
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
+    if (overlay) overlay.addEventListener('click', closeModalWindow);
 
     // 4. ScrollSpy Active Nav Link Indicator
     const sections = document.querySelectorAll('section[id]');
