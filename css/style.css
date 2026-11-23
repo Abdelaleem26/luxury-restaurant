@@ -361,19 +361,24 @@ ul {
     overflow-y: auto;
     overscroll-behavior: contain;
     visibility: hidden;
-    transform: translateX(100%);
+    pointer-events: none;
     z-index: 1001;
     padding: 30px 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.35s ease, visibility 0.35s;
+    /* No offscreen transform: avoids RTL/compositor ghost panels. */
     box-shadow: -10px 0 30px rgba(0,0,0,0.6);
+}
+
+/* The HTML hidden attribute wins even against stale .open classes. */
+.mobile-menu[hidden] {
+    display: none !important;
 }
 
 .mobile-menu.open {
     visibility: visible;
-    transform: translateX(0);
+    pointer-events: auto;
 }
 
 .mobile-menu > * {
@@ -398,6 +403,9 @@ ul {
     height: 44px;
     flex-shrink: 0;
     line-height: 1;
+    position: relative;
+    z-index: 2;
+    touch-action: manipulation;
 }
 
 .mobile-nav-links {
@@ -434,10 +442,12 @@ ul {
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
+    pointer-events: none;
+    transition: opacity 0.2s ease;
 }
 
 .overlay.active {
+    pointer-events: auto;
     opacity: 1;
     visibility: visible;
 }
@@ -1601,4 +1611,8 @@ ul {
     .res-info-col, .res-form-col {
         padding: 30px 20px;
     }
+}
+
+@media (min-width: 1025px) {
+    .mobile-menu { display: none !important; }
 }
