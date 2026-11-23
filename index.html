@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم لوميير | Lumière Fine Dining & Restaurant</title>
+    <meta name="description" content="تجربة طعام فاخرة تجمع بين المذاق الراقي والأجواء الساحرة. احجز طاولتك الآن واستمتع بأشهى الأطباق المحضرة بأيدي نخبة من الطهاة.">
+    
+    <!-- Google Fonts (Cairo & Playfair Display for luxury touch) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-clock"></i> مفتوح يومياً: 12:00 م - 1:00 ص</span>
+                <span><i class="fa-solid fa-phone"></i> للحجز السريع: 01000000000</span>
+                <span><i class="fa-solid fa-location-dot"></i> القاهرة، التجمع الخامس - مول الداون تاون</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/201000000000" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="main-header" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-gold"><i class="fa-solid fa-utensils"></i> LUMIÈRE</span>
+                <span class="logo-sub">مطعم ومقهى فاخر</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">الرئيسية</a>
+                <a href="#about" class="nav-link">قصتنا</a>
+                <a href="#special" class="nav-link">المميز لدينا</a>
+                <a href="#menu" class="nav-link">قائمة الطعام</a>
+                <a href="#reservation" class="nav-link">حجز طاولة</a>
+                <a href="#reviews" class="nav-link">آراء الزوار</a>
+                <a href="#gallery" class="nav-link">المعرض</a>
+                <a href="#contact" class="nav-link">تواصل معنا</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <a href="#reservation" class="btn btn-gold btn-sm"><i class="fa-solid fa-calendar-check"></i> احجز الآن</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="القائمة">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-gold"><i class="fa-solid fa-utensils"></i> LUMIÈRE</span>
+            <button class="close-menu" id="closeMenu">&times;</button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#hero" class="mobile-link">الرئيسية</a>
+            <a href="#about" class="mobile-link">قصتنا</a>
+            <a href="#special" class="mobile-link">المميز لدينا</a>
+            <a href="#menu" class="mobile-link">قائمة الطعام</a>
+            <a href="#reservation" class="mobile-link">حجز طاولة</a>
+            <a href="#reviews" class="mobile-link">آراء الزوار</a>
+            <a href="#gallery" class="mobile-link">المعرض</a>
+            <a href="#contact" class="mobile-link">تواصل معنا</a>
+        </nav>
+        <div class="mobile-contact-box">
+            <a href="#reservation" class="btn btn-gold btn-block"><i class="fa-solid fa-calendar-check"></i> احجز طاولتك</a>
+            <a href="https://wa.me/201000000000" class="btn btn-whatsapp btn-block"><i class="fa-brands fa-whatsapp"></i> تواصل عبر واتساب</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-crown"></i> تجربة طعام ملكية لا تُنسى
+                </div>
+                <h1 class="hero-title">
+                    مذاق الأصالة والفخامة في كل طبق
+                </h1>
+                <p class="hero-desc">
+                    نصنع لك لحظات استثنائية من خلال توليفة مبتكرة تجمع بين أرقى فنون الطهي العالمي والمذاق الشرقي الأصيل، باستخدام مكونات طازجة 100% وأجواء تأسر الحواس.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-gold btn-lg">
+                        <i class="fa-solid fa-book-open"></i> استكشف قائمة الطعام
+                    </a>
+                    <a href="#reservation" class="btn btn-outline btn-lg">
+                        <i class="fa-solid fa-chair"></i> احجز طاولتك الآن
+                    </a>
+                </div>
+
+                <!-- Stats Highlights -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">+12</span>
+                        <span class="stat-label">سنة من الخبرة والإبداع</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">+65</span>
+                        <span class="stat-label">طبق حصري من الشيف</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">30k+</span>
+                        <span class="stat-label">عميل سعيد بخدمتنا</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">4.9 ★</span>
+                        <span class="stat-label">تقييم الجودة والخدمة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="أجواء مطعم لوميير" class="about-main-img">
+                    <div class="about-badge">
+                        <span class="badge-number">100%</span>
+                        <span class="badge-text">مكونات طازجة وجودة فائقة</span>
+                    </div>
+                    <div class="about-chef-tag">
+                        <i class="fa-solid fa-award"></i> حائز على جائزة التميز للضيافة 2024
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <span class="section-tag">من نحن</span>
+                    <h2 class="section-title">شغف بالطهي الراقي، وكرم ضيافة يفوق التوقعات</h2>
+                    <p class="about-lead">
+                        تأسس مطعم <strong>لوميير</strong> ليكون وجهة عشاق الذوق الرفيع. نؤمن أن تناول الطعام ليس مجرد وجبة، بل هو رحلة شعورية متكاملة تبدأ من دفء الاستقبال وتنتهي بابتسامة الرضا.
+                    </p>
+                    <p class="about-body">
+                        نختار لحومنا وخضرواتنا وتوابلنا بعناية فائقة يومياً من أفضل المزارع الموثوقة. يحرص فريق الطهاة لدينا تحت قيادة الشيف التنفيذي على تقديم أطباق تجمع بين الجمال البصري والتناغم الرائع في النكهات.
+                    </p>
+
+                    <div class="about-features-list">
+                        <div class="about-feat-item">
+                            <div class="feat-icon"><i class="fa-solid fa-seedling"></i></div>
+                            <div>
+                                <h4>مكونات عضوية وطازجة</h4>
+                                <p>خالية تماماً من الإضافات الصناعية والزيوت المهدرجة.</p>
+                            </div>
+                        </div>
+                        <div class="about-feat-item">
+                            <div class="feat-icon"><i class="fa-solid fa-hat-chef"></i></div>
+                            <div>
+                                <h4>طهاة دوليون محترفون</h4>
+                                <p>خبرة طويلة في كبرى الفنادق والمطاعم العالمية.</p>
+                            </div>
+                        </div>
+                        <div class="about-feat-item">
+                            <div class="feat-icon"><i class="fa-solid fa-music"></i></div>
+                            <div>
+                                <h4>أجواء رومانسية وعائلية</h4>
+                                <p>جلسات مريحة وتصميم ديكور مريح مع موسيقى هادئة.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-actions">
+                        <a href="#reservation" class="btn btn-gold"><i class="fa-solid fa-utensils"></i> شاركنا التجربة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Chef's Selection -->
+    <section class="special section-padding" id="special">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">أطباق مميزة</span>
+                <h2 class="section-title">اختيارات الشيف الحصرية لهذا الأسبوع</h2>
+                <p class="section-subtitle">أطباق تم إعدادها خصيصاً لتمنحك مذاقاً فريداً لن تجده في أي مكان آخر</p>
+            </div>
+
+            <div class="special-cards-grid">
+                <!-- Special Card 1 -->
+                <div class="special-card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="ستيك ريب آي أنجوس">
+                        <span class="card-tag">الأكثر طلباً</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <h3 class="card-title">ستيك بلاك أنجوس ريب آي</h3>
+                            <span class="card-price">340 ج.م</span>
+                        </div>
+                        <p class="card-desc">قطعة لحم أنجوس فاخرة مشوية على اللهب، متبلة بأعشاب الروزماري والثوم البري، تقدم مع صوص المشروم والبطاطس البيوريه المخملية.</p>
+                        <div class="card-footer">
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9 (120 تقييم)</span>
+                            <a href="#reservation" class="order-btn"><i class="fa-solid fa-arrow-left"></i> احجز وتذوق</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Card 2 -->
+                <div class="special-card featured">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=80" alt="سلمون مشوي مع الأعشاب">
+                        <span class="card-tag gold">توقيع الشيف</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <h3 class="card-title">فيليه السلمون النرويجي الملكي</h3>
+                            <span class="card-price">290 ج.م</span>
+                        </div>
+                        <p class="card-desc">سلمون طازج مشوي بصلصة الزبدة والليمون والشبت، يقدم مع الهليون المشوي وحبوب الكينوا المتبلة بخل البلسميك المعتق.</p>
+                        <div class="card-footer">
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0 (98 تقييم)</span>
+                            <a href="#reservation" class="order-btn"><i class="fa-solid fa-arrow-left"></i> احجز وتذوق</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Card 3 -->
+                <div class="special-card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281292?auto=format&fit=crop&w=700&q=80" alt="باستا الترافل الإيطالية">
+                        <span class="card-tag">نكهة أصلية</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <h3 class="card-title">تاجلياتيل الترافل الأسود</h3>
+                            <span class="card-price">220 ج.م</span>
+                        </div>
+                        <p class="card-desc">باستا يدوية طازجة مغطاة بكريمة الكمأة الإيطالية الفاخرة، وجبن البارميزان ريجيانو المعتق لمدة 24 شهراً وشرائح المشروم البورسليني.</p>
+                        <div class="card-footer">
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.8 (85 تقييم)</span>
+                            <a href="#reservation" class="order-btn"><i class="fa-solid fa-arrow-left"></i> احجز وتذوق</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section class="menu section-padding" id="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">قائمة الطعام</span>
+                <h2 class="section-title">تصفح تشكيلتنا الغنية والمتنوعة</h2>
+                <p class="section-subtitle">اختر القسم المناسب لاستعراض أشهى الأطباق المحضرة بكل حب وإتقان</p>
+                
+                <!-- Category Tabs -->
+                <div class="menu-tabs" id="menuTabs">
+                    <button class="tab-btn active" data-filter="all">جميع الأطباق</button>
+                    <button class="tab-btn" data-filter="mains">الأطباق الرئيسية</button>
+                    <button class="tab-btn" data-filter="grills">المشويات</button>
+                    <button class="tab-btn" data-filter="appetizers">المقبلات والسلطات</button>
+                    <button class="tab-btn" data-filter="desserts">الحلويات والمشروبات</button>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuItems">
+                
+                <!-- Item 1 (Mains) -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80" alt="ريب آي ستيك">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">ريب آي ستيك بلاك أنجوس</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">340 ج.م</span>
+                        </div>
+                        <p class="menu-desc">لحم بقري فاخر، صوص الفلفل الأسود أو المشروم، بطاطس مهروسة بالثوم.</p>
+                        <span class="item-tag">مميز</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 (Grills) -->
+                <div class="menu-item" data-category="grills">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80" alt="مشويات مشكلة فاخرة">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">مشاوي لوميير المشكلة</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">310 ج.م</span>
+                        </div>
+                        <p class="menu-desc">ريش ضاني متبلة، كباب بلدي، شيش طاووق، مع الخبز الطازج وصوص الطحينة المدخن.</p>
+                        <span class="item-tag">شعبية عالية</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 (Mains) -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" alt="سلمون بالزبدة">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">فيليه سلمون مشوي بالليمون</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">290 ج.م</span>
+                        </div>
+                        <p class="menu-desc">يقدم مع الخضار السوتيه والأرز البسمتي بالزعفران وصلصة الزبدة والليمون.</p>
+                        <span class="item-tag">صحي</span>
+                    </div>
+                </div>
+
+                <!-- Item 4 (Mains) -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="برجر واغيو فاخر">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">برجر لحم واغيو مع الجبن</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">195 ج.م</span>
+                        </div>
+                        <p class="menu-desc">لحم واغيو استرالي مشوي، جبن شيدر مدخن، بصل مكرمل، خبز بريوش طازج وبطاطس كريسبي.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 (Mains) -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80" alt="بيتزا نابوليتانا حطب">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">بيتزا نابوليتانا على الحطب</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">175 ج.م</span>
+                        </div>
+                        <p class="menu-desc">عجينة مخمرة 48 ساعة، طماطم سان مارزانو الإيطالية، جبن موتزاريلا طازج، وريحان عطري.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 (Appetizers) -->
+                <div class="menu-item" data-category="appetizers">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80" alt="سلطة سيزر الدجاج">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">سلطة سيزر مع الدجاج المشوي</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">110 ج.م</span>
+                        </div>
+                        <p class="menu-desc">خس روماني مقرمش، قطع دجاج مشوية، جبن بارميزان، خبز محمص وصوص السيزر الكلاسيكي.</p>
+                    </div>
+                </div>
+
+                <!-- Item 7 (Appetizers) -->
+                <div class="menu-item" data-category="appetizers">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=400&q=80" alt="مقبلات شرقية ومتبل">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">مقبلات لوميير الملكية</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">130 ج.م</span>
+                        </div>
+                        <p class="menu-desc">حمص بالصنوبر واللحم، متبل باذنجان مدخن، ورق عنب بدبس الرمان، كبيبة مقرمشة.</p>
+                        <span class="item-tag">مشاركة</span>
+                    </div>
+                </div>
+
+                <!-- Item 8 (Desserts) -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80" alt="كعكة شوكولاتة فادج">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">فوندان الشوكولاتة البلجيكية</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">125 ج.م</span>
+                        </div>
+                        <p class="menu-desc">كيك ساخن بحشوة الشوكولاتة السائلة، يقدم مع آيس كريم الفانيليا الطبيعي وصوص الكراميل المملح.</p>
+                        <span class="item-tag">حلوى اليوم</span>
+                    </div>
+                </div>
+
+                <!-- Item 9 (Desserts) -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-thumb">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=400&q=80" alt="مشروبات موخيتو منعشة">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">موخيتو التوت البري والنعناع</h4>
+                            <span class="dots"></span>
+                            <span class="menu-price">75 ج.م</span>
+                        </div>
+                        <p class="menu-desc">توليفة منعشة من التوت الطازج، النعناع الأخضر، عصير الليمون المنعش ومياه الصودا الفوارة.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">لماذا نحن؟</span>
+                <h2 class="section-title">معايير الدقة والتميز التي نفخر بها</h2>
+                <p class="section-subtitle">نهتم بأدق التفاصيل لتكون كل زيارة لك ذكرى جميلة تستحق التكرار</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feat-card-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>طهاة من الطراز الأول</h3>
+                    <p>فريق من أمهر الطهاة ذوي الشغف والإبداع، يبتكرون نكهات استثنائية ترضي أصحاب الذوق الرفيع.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-card-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>مكونات نقية وطازجة 100%</h3>
+                    <p>توريد يومي للمنتجات واللحوم من مصادر معتمدة دون استخدام أي مواد حافظة أو مجمدة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-card-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <h3>أجواء وديكور ساحر</h3>
+                    <p>إضاءة مدروسة وموسيقى هادئة وتصميم داخلي فاخر يوفر لك ولعائلتك الخصوصية والراحة التامة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-card-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>ضيافة ملكية واستقبال دافئ</h3>
+                    <p>فريق عمل مدرب على أعلى مستوى في فنون الإتيكيت والضيافة لتلبية رغباتك بسرعة وابتسامة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation section-padding" id="reservation">
+        <div class="container">
+            <div class="reservation-box">
+                <div class="res-info-col">
+                    <span class="section-tag gold-tag">الحجز أونلاين</span>
+                    <h2 class="res-title">احجز طاولتك بكل سهولة واستمتع بأمسية رائعة</h2>
+                    <p class="res-desc">
+                        لتجنب الانتظار وضمان أفضل موقع لطاولتك، يرجى ملء النموذج أدناه أو الحجز المباشر والسريع عبر الواتساب.
+                    </p>
+                    
+                    <div class="res-contact-points">
+                        <div class="point-item">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <div>
+                                <h5>الاتصال الهاتفي المباشر</h5>
+                                <p>01000000000 / 0220000000</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <h5>حجز عبر الواتساب</h5>
+                                <p>خدمة عملاء سريعة للرد على استفساراتكم خلال دقائق.</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h5>ساعات العمل</h5>
+                                <p>طوال أيام الأسبوع من 12:00 ظهراً إلى 1:00 صباحاً</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="res-form-col">
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guestName"><i class="fa-solid fa-user"></i> الاسم بالكامل</label>
+                                <input type="text" id="guestName" required placeholder="مثال: أحمد محمد">
+                            </div>
+                            <div class="form-group">
+                                <label for="guestPhone"><i class="fa-solid fa-phone"></i> رقم الهاتف</label>
+                                <input type="tel" id="guestPhone" required placeholder="01xxxxxxxxx">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guestCount"><i class="fa-solid fa-users"></i> عدد الضيوف</label>
+                                <select id="guestCount" required>
+                                    <option value="1">شخص واحد</option>
+                                    <option value="2" selected>شخصان (طاولة ثنائية)</option>
+                                    <option value="3-4">3 إلى 4 أشخاص</option>
+                                    <option value="5-8">5 إلى 8 أشخاص (عائلي)</option>
+                                    <option value="+8">أكثر من 8 أشخاص (مجموعة)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingDate"><i class="fa-solid fa-calendar"></i> تاريخ الحجز</label>
+                                <input type="date" id="bookingDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingTime"><i class="fa-solid fa-clock"></i> توقيت الحضور</label>
+                                <select id="bookingTime" required>
+                                    <option value="01:00 PM">01:00 ظهراً (غداء)</option>
+                                    <option value="03:00 PM">03:00 عصراً</option>
+                                    <option value="06:00 PM">06:00 مساءً</option>
+                                    <option value="08:00 PM" selected>08:00 مساءً (عشاء)</option>
+                                    <option value="10:00 PM">10:00 مساءً</option>
+                                    <option value="11:30 PM">11:30 مساءً</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="occasionType"><i class="fa-solid fa-cake-candles"></i> نوع المناسبة</label>
+                                <select id="occasionType">
+                                    <option value="عشاء عادي">عشاء / غداء عادي</option>
+                                    <option value="عيد ميلاد">عيد ميلاد واحتفال</option>
+                                    <option value="ذكرى سنوية / رومانسي">ذكرى سنوية / مناسبة رومانسية</option>
+                                    <option value="عشاء عمل">اجتماع / عشاء عمل</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialNotes"><i class="fa-solid fa-comment-dots"></i> ملاحظات خاصة (طاولة بجوار النافذة، تزيين، إلخ)</label>
+                            <textarea id="specialNotes" rows="3" placeholder="اكتب أي طلب خاص لتجهيزه لك قبل وصولك..."></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-gold btn-block">
+                                <i class="fa-solid fa-check-circle"></i> تأكيد وحجز الطاولة
+                            </button>
+                            <button type="button" id="whatsappBookingBtn" class="btn btn-whatsapp btn-block">
+                                <i class="fa-brands fa-whatsapp"></i> إرسال تفاصيل الحجز عبر واتساب فوراً
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="reviews section-padding" id="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">آراء العملاء</span>
+                <h2 class="section-title">ماذا يقول ضيوفنا الكرام عنا؟</h2>
+                <p class="section-subtitle">فخورون بثقة آلاف العملاء ونسعى دوماً لتقديم الأفضل</p>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "من أجمل المطاعم اللي زرتها مؤخراً. الستيك كان مطبوخ بدرجة تسوية مثالية والصوصات خرافية. الاستقبال محترم جداً والمكان هادي وراقي لأقصى درجة."
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="سارة المهدي">
+                        <div>
+                            <h5>سارة المهدي</h5>
+                            <span>ناقدة طعام وبلوجر</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "احتفلت بعيد زواجي هناك وجهزوا لي طاولة بديكور رائع وورد. الشيف والسيرفس عندهم يستاهل 7 نجوم مش بس 5! تجربة أكيد هتتكرر كتير."
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="مهندس كريم نبيل">
+                        <div>
+                            <h5>م. كريم نبيل</h5>
+                            <span>عميل دائم</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "الباستا وحلوى فوندان الشوكولاتة كانت خيالية! الأكل وصل ساخن وبأعلى جودة، وميزة الحجز بالواتساب سهلت عليا جداً الوصول بدون أي انتظار."
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="د. طارق محمود">
+                        <div>
+                            <h5>د. طارق محمود</h5>
+                            <span>أستاذ جامعي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section-padding" id="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">المعرض</span>
+                <h2 class="section-title">جولة بصرية في أرجاء لوميير</h2>
+                <p class="section-subtitle">لقطات من تفاصيل الضيافة، الأطباق الشهية، والجلسات الأنيقة</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="ديكور المطعم الداخلي">
+                    <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i><span>الأجواء الداخلية</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=600&q=80" alt="طاولة عشاء فاخرة">
+                    <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i><span>طاولات كبار الشخصيات</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="طبق إيطالي مميز">
+                    <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i><span>أطباق الباستا الطازجة</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="فريق الضيافة">
+                    <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i><span>فريق الاستقبال</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="الشيف أثناء التحضير">
+                    <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i><span>لمسات الشيف</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="سلطات صحية ملونة">
+                    <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i><span>سلطات عضوية طازجة</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">تواصل معنا</span>
+                    <h2 class="section-title">نسعد بزيارتكم واستقبال استفساراتكم</h2>
+                    <p class="contact-lead">
+                        فريقنا متاح دائماً للرد على أسئلتكم، وتجهيز حجوزات المناسبات الخاصة وحفلات الشركات.
+                    </p>
+
+                    <div class="contact-items">
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div>
+                                <h5>العنوان</h5>
+                                <p>شارع التسعين الشمالي، التجمع الخامس، القاهرة الجديدة، مصر</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h5>الهاتف والواتساب</h5>
+                                <p>01000000000 / 01111111111</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h5>البريد الإلكتروني</h5>
+                                <p>info@lumiere-restaurant.com</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h5>مواعيد العمل</h5>
+                                <p>يومياً: من 12:00 ظهراً حتى 1:00 بعد منتصف الليل</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.61185038891!2d31.3770308!3d30.007413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583c1380cba7ef%3A0xd541260e3e5719ef!2sNew%20Cairo%201%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 400px; border-radius: 16px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col about-col">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-gold"><i class="fa-solid fa-utensils"></i> LUMIÈRE</span>
+                    <span class="logo-sub">مطعم ومقهى فاخر</span>
+                </a>
+                <p>وجهتكم المثالية لتناول أشهى المأكولات العالمية والشرقية وسط أجواء ملكية مريحة وخدمة تليق بكم.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">قصة المطعم</a></li>
+                    <li><a href="#menu">قائمة المأكولات</a></li>
+                    <li><a href="#special">أطباق الأسبوع</a></li>
+                    <li><a href="#reservation">حجز طاولة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>خدمات إضافية</h4>
+                <ul>
+                    <li><a href="#reservation">حفلات أعياد الميلاد</a></li>
+                    <li><a href="#reservation">غداء وعشاء عمل</a></li>
+                    <li><a href="#reservation">بوفيهات مفتوحة للمناسبات</a></li>
+                    <li><a href="#contact">خدمة التوصيل السريع</a></li>
+                    <li><a href="#contact">بطاقات الهدايا الفاخرة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>النشرة البريدية</h4>
+                <p>اشترك ليصلك جديد عروضنا الأسبوعية وقوائم أطباق الموسم الحصرية.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('شكراً لاشتراكك في نشرتنا البريدية!');">
+                    <input type="email" placeholder="بريدك الإلكتروني" required>
+                    <button type="submit" class="btn btn-gold"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container copyright-row">
+                <p>&copy; 2026 مطعم لوميير (Lumière). جميع الحقوق محفوظة.</p>
+                <p>تصميم وتطوير احترافي للويب</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Button -->
+    <a href="https://wa.me/201000000000?text=مرحباً%20مطعم%20لوميير،%20أرغب%20في%20الاستفسار%20عن%20حجز%20طاولة." 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="تحدث معنا على واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="wa-tooltip">تواصل معنا فوراً</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="الرجوع للأعلى">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+    <!-- Reservation Modal Popup -->
+    <div class="modal" id="successModal">
+        <div class="modal-card">
+            <div class="modal-icon-wrap">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3>تم استلام طلب الحجز بنجاح!</h3>
+            <p id="modalMsg">شكراً لك، سنتواصل معك هاتفياً أو عبر الواتساب لتأكيد تفاصيل طاولتك خلال دقائق.</p>
+            <div class="modal-details" id="modalDetails"></div>
+            <button class="btn btn-gold btn-block" id="closeModal">حسناً، ممتاز</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
