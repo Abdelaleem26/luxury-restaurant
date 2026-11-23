@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261123-nav2">
 </head>
 <body>
 
@@ -59,7 +59,7 @@
             <!-- Nav Actions -->
             <div class="nav-actions">
                 <a href="#reservation" class="btn btn-gold btn-sm"><i class="fa-solid fa-calendar-check"></i> احجز الآن</a>
-                <button class="mobile-toggle" id="mobileToggle" aria-label="القائمة">
+                <button class="mobile-toggle" id="mobileToggle" type="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="القائمة">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -67,10 +67,10 @@
     </header>
 
     <!-- Mobile Drawer Navigation -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" hidden aria-hidden="true" aria-label="قائمة التنقل">
         <div class="mobile-menu-header">
             <span class="logo-gold"><i class="fa-solid fa-utensils"></i> LUMIÈRE</span>
-            <button class="close-menu" id="closeMenu">&times;</button>
+            <button class="close-menu" id="closeMenu" type="button" aria-label="إغلاق القائمة">&times;</button>
         </div>
         <nav class="mobile-nav-links">
             <a href="#hero" class="mobile-link">الرئيسية</a>
@@ -814,6 +814,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=20261123-nav2"></script>
 </body>
 </html>
