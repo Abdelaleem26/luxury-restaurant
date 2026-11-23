@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenu = document.getElementById('closeMenu');
     const mobileMenu = document.getElementById('mobileMenu');
     const overlay = document.getElementById('overlay');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-contact-box a');
 
     function openMobileMenu() {
         mobileMenu.classList.add('open');
